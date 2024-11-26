@@ -1,0 +1,96 @@
+<!-- teman-saya.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teman Saya</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Gaya section agar gambar berada di tengah layar */
+        section {
+            display: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* Vertikal di tengah */
+            gap: 20px;
+            padding: 20px 0;
+            text-align: center;
+            /* Menambahkan teks agar rata tengah */
+            height: 100vh;
+        }
+
+        /* Gaya untuk gambar profile */
+        section .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: 2px solid #fff;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+            /* Memberikan jarak antara gambar dan teks */
+        }
+
+        /* Efek hover pada gambar */
+        section .profile-pic:hover {
+            transform: scale(1.05);
+        }
+
+        /* Gaya untuk teks dalam section */
+        section p {
+            width: 100%;
+            font-style: italic;
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 10px;
+            /* Jarak antara gambar dan teks */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html?v=1">About Me</a></li>
+            <li><a href="pacar-saya.html?v=1">Relationship</a></li>
+            <li><a href="teman-saya.html?v=1">Friendship</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div>
+            <img src="imgfriend/Banda.JPG" alt="Profile Picture" class="profile-pic">
+            <img src="imgfriend/Bireuen.JPG" alt="Profile Picture" class="profile-pic">
+            <img src="imgfriend/Exotic.JPG" alt="Profile Picture" class="profile-pic">
+            <img src="imgfriend/Havana.JPG" alt="Profile Picture" class="profile-pic">
+            <img src="imgfriend/SiCek.JPG" alt="Profile Picture" class="profile-pic">
+            <p>"Beberapa orang tinggal dalam hidupmu agar kau menghargai kenangan. Beberapa orang tinggal dalam kenangan
+                agar kau menghargai hidupmu." - Fiersa Besari</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; <span>HAFIZH AL ASYRAF
+                <?= date("Y") ?>
+            </span> - Didukung oleh sebatang rokok surya dan secangkir kopi.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!-- pacar-saya.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacar Saya</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<style>
+
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f4d03f, #16a085, #3498db, #9b59b6);
+            background-size: 200% 200%;
+            animation: gradientBG 10s ease infinite;
+        }   
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 20%;
+            }
+
+            20% {
+                background-position: 20% 50%;
+            }
+
+            50% {
+                background-position: 50% 70%;
+            }
+
+            70% {
+                background-position: 70% 100%;
+            }
+
+            100% {
+                background-position: 0% 20%;
+            }
+        }
+
+        .card {
+            background: #ffffff;
+            width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            margin: 40px auto;
+            /* Menempatkan card di tengah */
+        }
+
+        .card .header {
+            background: linear-gradient(135deg, #76c893, #73aace, #8b91ca, #c486b5, #e09f91, #f1c27d);
+            background-size: 200% 200%;
+            animation: smoothcolorCycle 0.5s ease infinite;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 200px 200px 0 0 0 0;
+        }
+
+        @keyframes smoothcolorCycle {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 50% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            75% {
+                background-position: 50% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .card .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .card .name {
+            margin-top: 60px;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            background: linear-gradient(135deg, #76c893, #73aace, #8b91ca, #c486b5, #e09f91, #f1c27d);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: smoothTextColorCycle 0.5s ease-in-out infinite;
+        }
+
+        @keyframes smoothTextColorCycle {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 50% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            75% {
+                background-position: 50% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .card .link {
+            display: block;
+            padding: 12px 20px;
+            margin: 15px auto;
+            text-decoration: none;
+            font-size: 1em;
+            color: #fff;
+            background: linear-gradient(135deg, #76c893, #73aace, #8b91ca, #c486b5, #e09f91, #f1c27d);
+            background-size: 200% 200%;
+            animation: smoothcolorCycle 0.5s ease infinite;
+            border-radius: 10px;
+            width: 80%;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .card .link:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+    /* Gaya section agar gambar berada di tengah layar */
+    section {
+        display: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* Vertikal di tengah */
+        gap: 20px;
+        padding: 20px 0;
+        text-align: center;
+        /* Menambahkan teks agar rata tengah */
+        height: 100vh;
+    }
+
+    /* Gaya untuk gambar profile */
+    section .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        border: 2px solid #fff;
+        object-fit: cover;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 20px;
+        /* Memberikan jarak antara gambar dan teks */
+    }
+
+    /* Efek hover pada gambar */
+    section .profile-pic:hover {
+        transform: scale(1.05);
+    }
+
+    /* Gaya untuk teks dalam section */
+    section p {
+        width: 100%;
+        font-style: italic;
+        font-size: 1.1em;
+        color: #333;
+        margin-top: 10px;
+        /* Jarak antara gambar dan teks */
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+</style>    
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html?v=1">About Me</a></li>
+            <li><a href="pacar-saya.html?v=1">Relationship</a></li>
+            <li><a href="teman-saya.html?v=1">Friendship</a></li>
+        </ul>
+    </nav>
+
+    <div class="card">
+        <div class="header"></div>
+        <img src="img/Nadia.JPG" alt="Profile Picture" class="profile-pic">
+        <h1 class="name">NADIA RIZKINA</h1>
+        <a href="https://instagram.com/ndrkna" class="link" target="_blank">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.tiktok.com/@kina25b" class="link" target="_blank">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+
+    </div>
+
+    <section>
+        <img src="imggf/Cafe.JPG" alt="Profile Picture" class="profile-pic">
+        <img src="imggf/Nadd.JPG" alt="Profile Picture" class="profile-pic">
+        <img src="imggf/Nanad.JPG" alt="Profile Picture" class="profile-pic">
+        <img src="imggf/Pantai.JPG" alt="Profile Picture" class="profile-pic">
+        <img src="imggf/Roms.JPG" alt="Profile Picture" class="profile-pic">
+        <p>"Jika saatnya tiba, sedih akan menjadi tawa, perih akan menjadi cerita, kenangan akan menjadi guru, rindu
+            akan menjadi temu, kau dan aku akan menjadi kita." - Fiersa Besari</p>
+    </section>
+
+    <footer>
+        <p>Copyright &copy; <span>HAFIZH AL ASYRAF
+                <?= date("Y") ?>
+            </span> - Didukung oleh sebatang rokok surya dan secangkir kopi.</p>
+    </footer>
+</body>
+
+</html>
